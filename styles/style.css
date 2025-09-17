@@ -1,0 +1,181 @@
+
+html{
+	font-size: 1.5rem;
+}
+
+header{
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	margin-top : 3em;
+	margin-bottom: 20px;
+	background-image: url("../images/imgStQtin.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+a{
+	color: inherit;
+}
+
+#mainTitle{
+	
+	color: white;
+	text-align: center;
+	display: flex;           /* active Flexbox */
+  justify-content: center; /* centre horizontalement */
+  align-items: center; 
+	backdrop-filter: blur(3px);
+	border-radius: 10px;
+	margin: 10px;
+	margin-left: 150px;
+}
+.menu{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	float: right;	
+	text-align: center;
+	padding-right: 40px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+ul{
+	list-style: none;
+}
+
+article{
+	display: flex; 
+  align-items: center;  
+  justify-content: center; 
+}
+
+.menu_item{
+	display: flex; /* Pour centrer le contenu du li */
+  align-items: center;  /* Centre verticalement */
+  justify-content: center;  /* Centre horizontalement */
+	
+}
+
+.menu_item a{
+	display: flex;
+  align-items: center;     /* Centre verticalement le texte */
+  justify-content: center;
+	text-decoration: none;
+	border: 2px solid white;
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	width: 200px;
+	height: 40px;
+	color: white;
+	vertical-align: middle;
+}
+
+.illustration{
+	border-radius: 10px; /* bords arrondis */
+	display: block;
+	width: 100%;         /* ou une largeur fixe : 300px */
+  height: 250px;    /* hauteur uniforme */
+  object-fit: cover;   /* remplit sans déformer */
+	justify-self: right;
+}
+
+/*.apparts > :nth-child(3) {
+  justify-self: center; 
+	width: 100%;
+}
+
+.apparts{
+  transition: width 0.3s ease;
+	display: grid; 
+	grid-template-columns: 1fr 1px 1fr;
+	gap: 2%;
+}*/
+
+form, .apparts, #informations{
+	align-items: center;
+	justify-content: center;
+	padding: 1%;
+	border: 1px solid white;
+	border-radius: 20px;
+	backdrop-filter: blur(10px); /* floute ce qui est derrière */
+	background: rgba(255, 255, 255, 0.2); /* transparent pour voir le fond */
+	width: clamp(400px, 40vw, 800px); /*modifie la taille de la figure en fonction de la taille de l'écran*/ 
+  padding: clamp(1rem, 2vw, 2rem); 
+}
+
+#informations{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2vw;
+}
+
+hr{
+	margin-left: 30px;
+	margin-right: 30px;
+	height: 5px;
+	background-color: grey;
+	border-radius: 5px;
+}
+
+article a{
+	text-decoration: none;
+}
+
+#imgDeFond{
+	padding: 3em;
+	background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.jpg");
+  background-size: cover;    /* adapte l'image à la taille du div */
+  background-position: center; /* centre l'image */
+  background-repeat: no-repeat; /* évite que l'image se répète */
+	color: white;
+	
+}
+
+#logo {
+	margin: 3em;
+	
+	width: clamp(250px, 15vw, 500px);
+	height : auto;
+	float: left;
+}
+
+#titre{
+	text-align: center;
+}
+
+#contenu{
+	/*background-color: rgba(255, 255, 255, 0.7);*/
+  /*font-size: clamp(1.5em, 5vw, 3em);*/
+	width: 100%;
+	height: 20%;
+	margin: auto;
+	text-align: center;
+}
+
+footer ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align : center;
+	border: 1px solid black;
+	padding: 3px;
+	border-radius: 5px;
+	background-color: ligthgrey;
+	font-size: 1.3rem;
+}
+
+
+
+/*section{
+	display: flex; 
+  align-items: center;  
+  justify-content: center; 
+}*/
+
+
+iframe {
+	border-radius: 10px;
+	background-color: #FFC0CB;
+}
+
+
