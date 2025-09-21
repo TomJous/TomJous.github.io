@@ -4,10 +4,13 @@ html{
 }
 
 header{
+	padding: 50px;
 	display: grid;
-	grid-template-columns: 1fr 2fr 2fr;
-	margin-top : 3em;
-	margin-bottom: 20px;
+	grid-template-columns: minmax(250px, 300px) 1fr 1fr;
+	align-items: center;
+  gap: 2rem;
+	margin-top : 2%;
+	margin-bottom: 1%;
 	background-image: url("../images/imgStQtin.jpeg");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,8 +21,20 @@ a{
 	color: inherit;
 }
 
+#logoContainer{
+	display: flex;           /* active Flexbox */
+  justify-content: center; /* centre horizontalement */
+}
+
+#logo {
+	/*margin: 3em;*/
+	/*clamp(250px, 15vw, 500px)*/
+	width: 100%;
+	height: auto;
+}
+
 #mainTitle{
-	
+	font-size: 1.4rem;
 	color: white;
 	text-align: center;
 	display: flex;           /* active Flexbox */
@@ -27,35 +42,18 @@ a{
   align-items: center; 
 	backdrop-filter: blur(3px);
 	border-radius: 10px;
-	margin: 10px;
-	margin-left: 150px;
+	padding: 2%;
 }
 .menu{
+	padding-left:0%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	float: right;	
 	text-align: center;
-	padding-right: 40px;
-	margin-bottom: 20px;
 	color: white;
+	gap: 1em;
+
 }
 
-ul{
-	list-style: none;
-}
-
-article{
-	display: flex; 
-  align-items: center;  
-  justify-content: center; 
-}
-
-.menu_item{
-	display: flex; /* Pour centrer le contenu du li */
-  align-items: center;  /* Centre verticalement */
-  justify-content: center;  /* Centre horizontalement */
-	
-}
 
 .menu_item a{
 	display: flex;
@@ -65,11 +63,85 @@ article{
 	border: 2px solid white;
 	border-radius: 10px;
 	backdrop-filter: blur(10px);
-	width: 200px;
-	height: 40px;
+	/*width: 200px;
+	height: 40px;*/
+	padding: 5%;
 	color: white;
 	vertical-align: middle;
 }
+
+
+@media (max-width: 1500px) and (min-width: 1000px){
+	header {
+    grid-template-columns: minmax(200px, 250px) 1fr 1fr;
+  }
+	#mainTitle{
+		font-size: 1.3rem;
+	}
+}
+
+@media (max-width: 1000px) and (min-width: 700px){
+	#mainTitle{
+		font-size: 1.2rem;
+	}
+
+  header {
+    grid-template-columns: minmax(200px, 250px) 1fr 1fr;
+  }
+
+	.menu{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 700px) and (min-width: 500px){
+
+	#mainTitle{
+		font-size: 1.1rem;
+	}
+
+  header {
+    grid-template-columns: 200px 1fr;
+  }
+	
+	.menu{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+
+	.menu_item a{
+		padding: 6px;
+	}
+}
+
+@media (max-width: 500px) {
+	#mainTitle{
+		font-size: 1.05rem;
+	}
+
+  header {
+    grid-template-columns: 1fr; 
+  }
+
+	#logoContainer, #mainTitle, .menu{
+		max-width: 80%;
+		margin: 0 auto; /* CENTRAGE horizontal */
+	}
+
+	.menu{
+		grid-template-columns: 1fr;
+	}
+}
+
+ul{
+	list-style: none;
+}
+
+/*article{
+	display: flex; 
+  align-items: center;  
+  justify-content: center; 
+}*/
 
 .illustration{
 	border-radius: 10px; /* bords arrondis */
@@ -78,36 +150,6 @@ article{
   height: 250px;    /* hauteur uniforme */
   object-fit: cover;   /* remplit sans déformer */
 	justify-self: right;
-}
-
-/*.apparts > :nth-child(3) {
-  justify-self: center; 
-	width: 100%;
-}
-
-.apparts{
-  transition: width 0.3s ease;
-	display: grid; 
-	grid-template-columns: 1fr 1px 1fr;
-	gap: 2%;
-}*/
-
-form, .apparts, #informations{
-	align-items: center;
-	justify-content: center;
-	padding: 1%;
-	border: 1px solid white;
-	border-radius: 20px;
-	backdrop-filter: blur(10px); /* floute ce qui est derrière */
-	background: rgba(255, 255, 255, 0.2); /* transparent pour voir le fond */
-	width: clamp(400px, 40vw, 800px); /*modifie la taille de la figure en fonction de la taille de l'écran*/ 
-  padding: clamp(1rem, 2vw, 2rem); 
-}
-
-#informations{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2vw;
 }
 
 hr{
@@ -129,15 +171,6 @@ article a{
   background-position: center; /* centre l'image */
   background-repeat: no-repeat; /* évite que l'image se répète */
 	color: white;
-	
-}
-
-#logo {
-	margin: 3em;
-	
-	width: clamp(250px, 15vw, 500px);
-	height : auto;
-	float: left;
 }
 
 #titre{
@@ -145,10 +178,7 @@ article a{
 }
 
 #contenu{
-	/*background-color: rgba(255, 255, 255, 0.7);*/
-  /*font-size: clamp(1.5em, 5vw, 3em);*/
 	width: 100%;
-	height: 20%;
 	margin: auto;
 	text-align: center;
 }
@@ -163,15 +193,6 @@ footer ul{
 	background-color: ligthgrey;
 	font-size: 1.3rem;
 }
-
-
-
-/*section{
-	display: flex; 
-  align-items: center;  
-  justify-content: center; 
-}*/
-
 
 iframe {
 	border-radius: 10px;
